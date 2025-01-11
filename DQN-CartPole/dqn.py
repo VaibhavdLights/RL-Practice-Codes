@@ -35,7 +35,7 @@ target_net.load_state_dict(q_net.state_dict())
 target_net.eval()
 
 # Loss and optimizer
-loss_fn = nn.SmoothL1Loss()  # Equivalent to Huber loss
+loss_fn = nn.MSELoss()  # Equivalent to Huber loss
 optimizer = optim.Adam(q_net.parameters())
 
 # Parameters
